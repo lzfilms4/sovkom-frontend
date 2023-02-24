@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+.partLeft {
+  position: absolute;
+  Width: 15%;
+  Height: 98%;
+  max-width: 250px;
+  min-width: 100px;
+  max-height: 1000px;
+  background: #4977EA;
+  border-radius: 20px;
+
+  .top {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #FFFFFF;
+  }
+
+  .staff {
+    position: absolute;
+    background: #FFFFFF;
+    width: 90%;
+    height: 25%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    border-radius: 35px;
+
+    .topSTAFF {
+      text-align: center;
+      font-size: 1.2vw;
+    }
+
+    .line {
+      position: absolute;
+      width: 90%;
+      height: 0.7%;
+      left: 5%;
+      background: black;
+    }
+
+    .search {
+      input[type="text"] {
+        position: absolute;
+        width: 90%;
+        height: 15%;
+        top: 45%;
+        left: 5%;
+        border: 0;
+        outline: none;
+        z-index: 10;
+
+        cursor: pointer;
+      }
+
+    }
+
+
+  }
+}
+
+
+
+
