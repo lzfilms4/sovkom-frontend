@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 body{
   background: #F4F7FE;
   z-index: -1;
@@ -19,6 +20,9 @@ body{
       text-align: center;
       font-size: 1.3vw;
       color: #FFFFFF;
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
     }
   }
 
@@ -289,7 +293,230 @@ body{
     }
   }
 }
+  .infoLine{
+    position: absolute;
+    background: black;
+    top: 60%;
+    left: 5%;
+    height: 1%;
+    width: 90%;
+  }
+  .yearsInCompany{
+    position: absolute;
+    width: 15%;
+    text-align: center;
+    top: 65%;
+    left: 5%;
+  }
+  .nastroenie7days{
+    position: absolute;
+    width: 15%;
+    text-align: center;
+    top: 65%;
+    left: 42.5%;
+  }
+  .vozrast{
+    position: absolute;
+    width: 15%;
+    height: 35%;
+    text-align: center;
+    top: 65%;
+    right: 5%;
+    .vozrastNumber{
+      position: absolute;
+      right: 42.5%;
+      top: 65%;
+    }
+  }
+
+.Happy{
+  position: absolute;
+  right: 15%;
+  height: 22%;
+  width: 30%;
+  top:15%;
+  background: white;
+  border-radius: 35px;
+  .lvlHappy{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:5%;
+  }
+  .lineHappy{
+    position: absolute;
+    width: 90%;
+    height: 1%;
+    background: black;
+    top:30%;
+    left: 5%;
+  }
+  .chanceToKick{
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+  }
+  .shkala{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width: 90%;
+    height: 5%;
+    background: linear-gradient(90deg, #FF0000 0%, #F2E823 47.53%, #1E9600 99.19%), #E9EDF7;
+    border-radius: 35px;
+    .leftshkala{
+      position: absolute;
+      top:  75%;
+      left: 0%;
+    }
+    .rightshkala{
+      position: absolute;
+      top: 75%;
+      right: 0%;
+    }
+  }
 }
+
+  .pererabotka{
+    position: absolute;
+    top: 40%;
+    right: 31%;
+    height: 15%;
+    width: 14%;
+
+    background: white;
+    border-radius: 35px;
+    .pererabotkatext {
+      width: 90%;
+      position: absolute;
+      text-align: center;
+      top: 10%;
+      left: 5%;
+    }
+    .pererabotkaLine{
+      position: absolute;
+      top: 50%;
+      width: 90%;
+      height: 1%;
+      left: 5%;
+      background: black ;
+    }
+    .pererabotkaNumber{
+      position: absolute;
+      top: 70%;
+      width: 100%;
+      text-align: center;
+    }
+    }
+  .doljnost{
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    height: 15%;
+    width: 14%;
+    background: white;
+    border-radius: 35px;
+    .doljnostText{
+      width: 100%;
+      top: 10%;
+      position: absolute;
+      text-align: center;
+    }
+    .doljnostLine{
+      position: absolute;
+      top: 50%;
+      width: 90%;
+      height: 1%;
+      left: 5%;
+      background: black ;
+    }
+    .doljnostAnswer{
+      position: absolute;
+      top: 70%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .testsResult{
+    position: absolute;
+    width: 70%;
+    height: 25%;
+    left: 15%;
+    top: 75%;
+    background: #FFFFFF;
+    border-radius: 35px 35px 0px 0px;
+    .testsResultText{
+      position: absolute;
+      width: 100%;
+      left: 2%;
+      top: 2%;
+      text-align: left;
+
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      color: #2B3674;
+    }
+    .test1  {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      left: 2%;
+      top: 25%;
+
+      background: #E9EDF7;
+      border-radius: 8px;
+       .test1Text{
+         position: absolute;
+         top: 20%;
+         left: 2%;
+       }
+      .points1{
+        height: 75%;
+        width: 2.5%;
+        background: white;
+        position: absolute;
+        top: 12%;
+        right: 2%;
+        border-radius: 35px;
+        text-align: center;
+      }
+    }
+    .test2  {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      left: 2%;
+      top: 50%;
+
+      background: #E9EDF7;
+      border-radius: 8px;
+      .test2Text{
+        position: absolute;
+        top: 20%;
+        left: 2%;
+      }
+    }
+    .test3  {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      left: 2%;
+      top: 75%;
+
+      background: #E9EDF7;
+      border-radius: 8px;
+      .test3Text{
+        position: absolute;
+        top: 20%;
+        left: 2%;
+      }
+    }
+  }
+  }
 
 
 
