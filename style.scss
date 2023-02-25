@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+body{
+  background: #F4F7FE;
+  z-index: -1;
+}
 .partLeft {
   position: absolute;
   Width: 15%;
   Height: 98%;
-  max-width: 250px;
+  max-width: 180px;
   min-width: 100px;
   max-height: 1000px;
   background: #4977EA;
   border-radius: 20px;
+  z-index: 1;
 
   .top {
-    text-align: center;
-    font-size: 1.2vw;
-    color: #FFFFFF;
+    h2 {
+      text-align: center;
+      font-size: 1.3vw;
+      color: #FFFFFF;
+    }
   }
 
   .staff {
@@ -20,14 +27,18 @@
     background: #FFFFFF;
     width: 90%;
     height: 25%;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 5%);
     border-radius: 35px;
 
     .topSTAFF {
-      text-align: center;
-      font-size: 1.2vw;
+      h3 {
+        position: absolute;
+        top: -5%;
+        left: 20%;
+        font-size: 1.2vw;
+      }
     }
 
     .line {
@@ -35,6 +46,7 @@
       width: 90%;
       height: 0.7%;
       left: 5%;
+      top: 25%;
       background: black;
     }
 
@@ -42,20 +54,241 @@
       input[type="text"] {
         position: absolute;
         width: 90%;
-        height: 15%;
-        top: 45%;
+        height: 10%;
+        top: 35%;
         left: 5%;
         border: 0;
         outline: none;
-        z-index: 10;
-
-        cursor: pointer;
+        z-index: 0;
+        font-size: 1.0vw;
       }
 
     }
 
+.line2{
+  position: absolute;
+  width: 90%;
+  height: 1%;
+  top: 50%;
+  background: black;
+  left: 5%;
+}
+    .toplist {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      top: 60%;
+      left: 5%;
 
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.0vw;
+      }
+    }
+      .line3{
+        position: absolute;
+        height: 1%;
+        width: 90%;
+        background: black;
+        left: 5%;
+        top: 75%;
+      }
+    .addDelete{
+      position: absolute;
+      top: 80%;
+      left:10%;
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.0vw;
+        text-align: center;
+      }
+    }
   }
+  .top {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #FFFFFF;
+  }
+
+  .testing {
+    position: absolute;
+    background: #FFFFFF;
+    width: 90%;
+    height: 25%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    border-radius: 35px;
+
+    .TopTesting {
+      h3 {
+        position: absolute;
+        text-align: center;
+        top: -5%;
+        left: 15%;
+        font-size: 1.2vw;
+      }
+    }
+
+    .lineTesting {
+      position: absolute;
+      width: 90%;
+      height: 0.7%;
+      left: 5%;
+      top: 25%;
+      background: black;
+    }
+
+    .create{
+        position: absolute;
+        width: 90%;
+        height: 10%;
+        top: 35%;
+        left: 5%;
+        font-size: 1.0vw;
+      }
+
+    .line2Testing{
+      position: absolute;
+      width: 90%;
+      height: 1%;
+      top: 50%;
+      background: black;
+      left: 5%;
+    }
+    .results {
+      position: absolute;
+      width: 90%;
+      height: 15%;
+      top: 60%;
+      left: 5%;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.0vw;
+      }
+    }
+    .line3testing{
+      position: absolute;
+      height: 1%;
+      width: 90%;
+      background: black;
+      left: 5%;
+      top: 75%;
+    }
+    .addDeleteTest{
+      position: absolute;
+      top: 80%;
+      left:10%;
+      a {
+
+        color: black;
+        text-decoration: none;
+        font-size: 1.0vw;
+      }
+    }
+  }
+  .SkillUp{
+    position: absolute;
+    width: 90%;
+    height: 38%;
+    top: 60%;
+    left: 5%;
+    border-radius: 35px;
+    background: white;
+    .topSkillUp{
+      position: absolute;
+      text-align: center;
+      top: 0.1%;
+      h3{
+        font-size: 1.2vw;
+      }
+    }
+    .WantUp{
+      width: 80%;
+      height: 15%;
+      background: rgba(233, 237, 247, 0.6);
+      border-radius: 8px;
+      position: absolute;
+      left: 10%;
+      top:35%;
+      .NameWantUp {
+        position: absolute;
+        left: 1%;
+        top: 15%;
+        font-size: 1.0vw;
+      }
+    }
+  }
+}
+/*-------------------end leftpart----------------*/
+.topPart{
+  position: absolute;
+  left: 0%;
+  height: 10%;
+  width: 100%;
+  background: #FFFFFF;
+  z-index: 0;
+  top: 0%;
+  .info {
+    h3 {
+      position: absolute;
+      top: 5%;
+      left: 20%;
+      font-size: 1.3vw;
+      font-family: 'DM Sans';
+      font-style: normal;
+      color: #1B2559;
+    }
+  }
+  .searchTop{
+      input[type="text"] {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        height: 50%;
+        border: 0;
+        outline: none;
+        font-size: 1.0vw;
+        background: rgba(233, 237, 247, 0.6);
+        border-radius: 35px;
+        text-align: center;
+      }
+  }
+}
+/*--------------end partTop---------------*/
+.MainPart{
+  z-index: 1;
+.MainName{
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  left: 15%;
+  top: 15%;
+  background: white;
+  border-radius: 35px;
+  .photo{
+    img {
+      position: absolute;
+      max-height: 20%;
+      max-width: 20%;
+      top: 20%;
+      left: 45%;
+    }
+  }
+  .FIO{
+    position: absolute;
+    top:40%;
+    left: 35%;
+    h3{
+      text-align: center;
+      font-size: 1.4vw;
+    }
+  }
+}
 }
 
 
