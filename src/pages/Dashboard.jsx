@@ -5,6 +5,10 @@ import SummaryBox, { SummaryBoxSpecial, SummaryBoxSpecialHappiness } from '../co
 import { colors, data } from '../constants'
 import './Dashboard.scss'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../redux/slices/personsSlice'
+
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -29,6 +33,8 @@ ChartJS.register(
 )
 
 const Dashboard = () => {
+    const count = useSelector((state) => state.counter.value)
+    const dispatch = useDispatch()
     return (
         <DashboardWrapper>
             <DashboardWrapperMain>
@@ -68,6 +74,7 @@ const Dashboard = () => {
                     <div className="title mb small">В основном положительное</div>
 
                 </div>
+                
                 <div className="title mb">Cамое плохое настроение</div>
                 <div className="mb">
                     <RevenueList />
