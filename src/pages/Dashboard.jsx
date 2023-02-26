@@ -33,7 +33,7 @@ ChartJS.register(
 )
 
 const Dashboard = () => {
-    const count = useSelector((state) => state.counter.value)
+    // const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
     return (
         <DashboardWrapper>
