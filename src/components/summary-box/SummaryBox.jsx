@@ -65,7 +65,8 @@ const SummaryBox = ({ item }) => {
 
 export default SummaryBox
 
-export const SummaryBoxSpecial = ({ item }) => {
+export const SummaryBoxSpecial = ({name, yearsAtCompany, age, mood, item }) => {
+    const moodSum = Math.floor((mood.reduce((sum,el) => sum+el,0))/mood.length)
     return (
         <Box>
             <div className="summary-box-special">
@@ -73,7 +74,7 @@ export const SummaryBoxSpecial = ({ item }) => {
                     <img src={image} />
                 </div>
                 <div className="summary-box-special__title">
-                    {item.title}
+                    {name}
                 </div>
                 <div className="summary-box__line">
                 </div>
@@ -82,11 +83,11 @@ export const SummaryBoxSpecial = ({ item }) => {
                     {/* {item.value} */}
                     <div className="summary-box-special__value__block">
                         <div className="summary-box-special__value__block__title"> Лет в компании</div>
-                        <div className="summary-box-special__value__block__value"> 3 </div>
+                        <div className="summary-box-special__value__block__value"> {yearsAtCompany} </div>
                     </div>
                     <div className="summary-box-special__value__block">
-                        <div className="summary-box-special__value__block__title"> Лет в компании</div>
-                        <div className="summary-box-special__value__block__value"> 3 </div>
+                        <div className="summary-box-special__value__block__title"> Настроение</div>
+                        <div className="summary-box-special__value__block__value"> {moodSum}/5 </div>
                     </div>
                     <div className="summary-box-special__value__block">
                         <div className="summary-box-special__value__block__title"> Лет в компании</div>

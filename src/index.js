@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
-import MyModal from "./components/sidebar/MyModal";
+import personsList from "./components/personsList/PersonsList";
 
 ReactDOM.render(
     <React.StrictMode>

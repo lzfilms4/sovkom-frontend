@@ -3,8 +3,6 @@ import './sidebar.scss'
 import { Link, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
-import MyModal from "./MyModal";
-import myModal from "./MyModal";
 
 
 const Sidebar = () => {
@@ -51,7 +49,7 @@ const Sidebar = () => {
                             </div>
                     </Link>
                     <div className="sidebar__menu__line"></div>
-                    <Link to={'/top-list'} className={`sidebar__menu__item`} onClick={closeSidebar}>
+                    <Link to={'PersonsList'} className={`sidebar__menu__item`} onClick={closeSidebar}>
                             <div className="sidebar__menu__item__icon">
                             <i className='bx bx-search'></i>
                             </div>
@@ -60,7 +58,7 @@ const Sidebar = () => {
                             </div>
                     </Link>
                     <div className="sidebar__menu__line"></div>
-                    <Link to ="MyModal" className={`sidebar__menu__item add`}>
+                    <Link to ="PersonsList" className={`sidebar__menu__item add`}>
 
                             <div className="sidebar__menu__item__txt add__txt" onClick={closeSidebar}>
                                 Добавить / Удалить

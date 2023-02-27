@@ -5,39 +5,24 @@ import SummaryBox, { SummaryBoxSpecial, SummaryBoxSpecialHappiness } from '../co
 import { colors, data } from '../constants'
 import './Dashboard.scss'
 
+import { useParams, useNavigate } from "react-router-dom";
 
-
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-} from 'chart.js'
 import OverallList from '../components/overall-list/OverallList'
 import RevenueList from '../components/revenue-list/RevenueList'
-
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-)
+import {useSelector} from "react-redux";
 
 const Dashboard = () => {
 
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
+    console.log(person)
     return (
         <DashboardWrapper>
             <DashboardWrapperMain>
                 <div className="row">
                     <div className="col-4 col-md-12">
-                        <SummaryBoxSpecial item={data.revenueSummary} />
+                        <SummaryBoxSpecial name={person.fullName} yearsAtCompany={person.YearsAtCompany} age={person.age} mood={person.mood} item={data.revenueSummary} />
                     </div>
                     <div className="col-8 hide-md">
                         <SummaryBoxSpecialHappiness item={data.revenueSummary} />

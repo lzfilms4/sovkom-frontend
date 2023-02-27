@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Blank from './pages/Blank'
 import Dashboard from './pages/Dashboard'
 import MainLayout from './layout/MainLayout'
-import MyModal from "./components/sidebar/MyModal";
+import PersonsList from "./components/personsList/PersonsList";
 import React from "react";
 
 function App() {
@@ -13,8 +13,9 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<MainLayout />}>
-                    <Route index element={<Dashboard />} />
-                    <Route path="MyModal" element={<MyModal />} />
+                    <Route index element={<PersonsList />} />
+                    <Route path="personsList" element={<PersonsList />} />
+                    <Route path="/personsList/:id" element={<Dashboard />} />
                     <Route path="products" element={<Blank />} />
                     <Route path="customers" element={<Blank />} />
                     <Route path="settings" element={<Blank />} />
