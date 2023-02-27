@@ -107,18 +107,24 @@
                 justify-content: space-around;
                 padding-bottom: 15px;
             }
-            &__txt{
+            &__txt {
                 margin-left: -30px;
                 font-family: 'Montserrat';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 13px;
                 line-height: 140%;
+                background: none;
+                border: none;
+
                 @include tablet {
                     margin-left: 0px;
                 }
-            
             }
+
+
+
+
             // @include tablet {
             //     padding-left: $mobileSpacing;
             // }

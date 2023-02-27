@@ -1,7 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit'
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
+import axios from "axios";
 
+export const fetchPersons = createAsyncThunk(// запрос
+    'persons/fetchPersons',
+    async (persons, thunkAPI) => {
+      const {data} = await axios.get('https://bright-wasp-long-johns.cyclic.app/person/findall')
+      return data
+    }
+)
 const initialState = {
-  value: 0,
+  persons: []
 }
 
 export const personsSlice = createSlice({
@@ -17,6 +25,13 @@ export const personsSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload
     },
+  },
+  extraReducers: (builder) => {
+    // Add reducers for additional action types here, and handle loading state as needed
+    builder.addCase(fetchPersons.fulfilled, (state, action) => {
+      // Add user to the state array
+      state.persons = action.payload
+    })
   },
 })
 

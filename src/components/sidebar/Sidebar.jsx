@@ -3,8 +3,12 @@ import './sidebar.scss'
 import { Link, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
+import MyModal from "./MyModal";
+import myModal from "./MyModal";
+
 
 const Sidebar = () => {
+
     const [activeIndex, setActiveIndex] = useState(0)
     const location = useLocation()
 
@@ -56,11 +60,13 @@ const Sidebar = () => {
                             </div>
                     </Link>
                     <div className="sidebar__menu__line"></div>
-                    <Link to={'/add'} className={`sidebar__menu__item add`} onClick={closeSidebar}>
-                            <div className="sidebar__menu__item__txt add__txt">
-                                Добавить/Удалить
+                    <Link to ="MyModal" className={`sidebar__menu__item add`}>
+
+                            <div className="sidebar__menu__item__txt add__txt" onClick={closeSidebar}>
+                                Добавить / Удалить
                             </div>
                     </Link>
+
                 </div>
 
                 <div className="sidebar__menu__block">
@@ -134,8 +140,12 @@ const Sidebar = () => {
                 } */}
                 
             </div>
+
         </div>
     )
 }
+
+
+
 
 export default Sidebar
