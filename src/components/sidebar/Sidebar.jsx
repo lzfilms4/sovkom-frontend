@@ -71,7 +71,7 @@ const Sidebar = () => {
                     <div className="sidebar__menu__title"> Тестирование</div>
                     <div className="sidebar__menu__line"></div>
 
-                    <Link to={'/search'} className={`sidebar__menu__item`} onClick={closeSidebar}>
+                    <Link to="Testing" className={`sidebar__menu__item`} onClick={closeSidebar}>
                             <div className="sidebar__menu__item__icon">
                             <i className='bx bx-search'></i>
                             </div>

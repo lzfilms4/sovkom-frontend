@@ -32,7 +32,7 @@ const data = {
         }
     ],
     revenueSummary: {
-        title: 'Вобликов Валерий Евгениевич',
+        title: 'Вобликов Валерий Евгеньевич',
         value: '$678',
         chartData: {
             labels: ['May', 'Jun', 'July', 'Aug', 'May', 'Jun', 'July', 'Aug'],
