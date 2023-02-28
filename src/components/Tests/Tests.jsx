@@ -1,7 +1,19 @@
 import React from "react";
 import './Tests.scss';
-const Tests = () =>{
+import {data} from "../../constants";
+import {Link} from "react-router-dom";
+import {decrement, fetchPersons, increment} from '../../redux/slices/personsSlice'
 
+import SummaryBox, {SummaryBoxSpecial} from "../summary-box/SummaryBox";
+import { useParams, useNavigate } from "react-router-dom";
+
+import {useDispatch, useSelector} from "react-redux";
+const Tests = () =>{
+    const dispatch = useDispatch()
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
+    console.log(person)
     return (
         <div className="maindiv">
         <div className="block">
@@ -12,8 +24,11 @@ const Tests = () =>{
                 <div className="answers">
                     <ul>
                         <li>
-                            <div className="answers1">1</div>
-                        </li>
+                            <div className="answers1">
+                                persons.persons.map((el,id) => (
+                                <div>{el.fullName}</div>
+                                ))</div>
+                            </li>
                         <li>
                             <div className="answers2">2</div>
                         </li>
