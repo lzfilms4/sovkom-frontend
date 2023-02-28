@@ -67,6 +67,7 @@ export default SummaryBox
 
 export const SummaryBoxSpecial = ({name, yearsAtCompany, age, mood, item }) => {
     const moodSum = Math.floor((mood.reduce((sum,el) => sum+el,0))/mood.length)
+
     return (
         <Box>
             <div className="summary-box-special">

@@ -1,0 +1,15 @@
+.answers{
+  display: flex;
+  justify-content: space-around;
+}
+input, .submit{
+  border: 1px solid #b4b9c7;
+  border-radius: 18px;
+  width: 70%;
+  height: 35px;
+  padding-left: 20px;
+}
+.submit{
+  text-align: center;
+  padding-left: 0px;
+}
