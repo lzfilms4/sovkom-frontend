@@ -1,29 +1,27 @@
 import React from "react";
 import './Testing.scss';
 import { useSelector, useDispatch } from 'react-redux'
-import {decrement, fetchPersons, increment} from '../../redux/slices/personsSlice'
+import {fetchTests} from '../../redux/slices/testsSlice'
 import {Link} from "react-router-dom";
 
 const Testing =() =>{
 
     const dispatch = useDispatch()
 
-    React.useEffect(() => {dispatch(fetchPersons())}, [])// загрузка
-    const persons = useSelector((state) => state.persons)
+    React.useEffect(() => {dispatch(fetchTests())}, [])
+    const tests = useSelector((state) => state.tests)
     return(
         <div className='personsList'>
             <div className='personsList__block'>
                 {
-                    persons.persons.map((el,id) => (
-                        <Link to={`/Tests/${el._id}`} key={id}>
-                            <div>{el.fullName}</div>
-                        </Link>
+                    tests.tests.map((el,id) => (
+                       <div className="test">
+                            <div>Тест: {el.name}</div>
+                            <Link to={`/Tests/${el._id}`} key={id}>  
+                                <div>Получить ссылку</div>
+                            </Link>
+                        </div>  
                     ))
-                }
-            </div>
-            <div className='personsList__block'>
-                {
-                    persons.persons.map((el,id) => (<div key={id}>{el.fullName} </div>))
                 }
             </div>
         </div>

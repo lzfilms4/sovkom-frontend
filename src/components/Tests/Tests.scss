@@ -1,6 +1,9 @@
 @use '../../scss/abstracts/' as *;
 @use 'sass:math';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+.title {
+  color: #000;
+}
 .maindiv{
   .block {
     background: white;
@@ -11,8 +14,9 @@
     font-weight: 500;
     font-size: 18px;
     color: $txtColor;
+    margin-bottom: 10px;
 
-    .question {
+    .question{
       width: 100%;
       text-align: center;
 
@@ -24,29 +28,7 @@
 
       padding-bottom: 15px;
 
-      .answers1 {
-
-        margin-bottom: 15px;
-        margin-top: 15px;
-        padding-left: 10px;
-
-        background: #A3AED0;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      .answers2 {
-
-        margin-bottom: 15px;
-        margin-top: 15px;
-        padding-left: 10px;
-
-        background: #A3AED0;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      .answers3 {
+      .answers {
 
         margin-bottom: 15px;
         margin-top: 15px;

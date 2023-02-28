@@ -9,16 +9,21 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import OverallList from '../components/overall-list/OverallList'
 import RevenueList from '../components/revenue-list/RevenueList'
-import {useSelector} from "react-redux";
+import { useSelector, useDispatch } from 'react-redux'
+import {fetchPersons} from '../redux/slices/personsSlice'
 
 const Dashboard = () => {
-
+    const dispatch = useDispatch()
+    React.useEffect(() => {dispatch(fetchPersons())}, [])
     const { id } = useParams();
     const navigate = useNavigate();
     const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
-    console.log(person)
+    const persons = useSelector((state) => state.persons)
+    
     return (
-        <DashboardWrapper>
+        persons.persons.length?
+        (
+            <DashboardWrapper>
             <DashboardWrapperMain>
                 <div className="row">
                     <div className="col-4 col-md-12">
@@ -63,6 +68,7 @@ const Dashboard = () => {
                 </div>
             </DashboardWrapperRight>
         </DashboardWrapper>
+        ) : ('')
     )
 }
 

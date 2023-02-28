@@ -13,29 +13,18 @@ const initialState = {
 }
 
 export const personsSlice = createSlice({
-  name: 'counter',
+  name: 'persons',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+
   },
   extraReducers: (builder) => {
-    // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(fetchPersons.fulfilled, (state, action) => {
-      // Add user to the state array
       state.persons = action.payload
     })
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = personsSlice.actions
+// export const { increment, decrement, incrementByAmount } = personsSlice.actions
 
 export default personsSlice.reducer
