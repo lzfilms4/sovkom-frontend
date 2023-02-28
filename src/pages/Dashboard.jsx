@@ -19,18 +19,18 @@ const Dashboard = () => {
     const navigate = useNavigate();
     const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
     const persons = useSelector((state) => state.persons)
-    
+
     return (
         persons.persons.length?
         (
             <DashboardWrapper>
             <DashboardWrapperMain>
                 <div className="row">
-                    <div className="col-4 col-md-12">
+                    <div className="col-5 col-md-12">
                         <SummaryBoxSpecial name={person.fullName} yearsAtCompany={person.YearsAtCompany} age={person.age} mood={person.mood} item={data.revenueSummary} />
                     </div>
-                    <div className="col-8 hide-md">
-                        <SummaryBoxSpecialHappiness item={data.revenueSummary} />
+                    <div className="col-7 hide-md">
+                        <SummaryBoxSpecialHappiness happiness={person.happiness*10} />
                     </div>
                     <div className="col-12 col-md-12">
                         <div className="row">
@@ -58,7 +58,9 @@ const Dashboard = () => {
                     <div className="mb">
                         <OverallList />
                     </div> 
-                    <div className="title mb small">В основном положительное</div>
+                    <div className="title mb small">
+                        В основном положительное
+                    </div>
 
                 </div>
                 

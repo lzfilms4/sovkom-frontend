@@ -112,7 +112,7 @@ const Sidebar = () => {
                     {
                         persons.length? personsNew.map((el,id) =>
                             (
-                            <>
+                            <div key={id}>
                                 <Link to={`/personsList/${el._id}`} className={`sidebar__menu__item`} onClick={closeSidebar}>
                                     <div className="sidebar__menu__item__icon">
                                         <i className='bx bx-user'></i>
@@ -126,7 +126,7 @@ const Sidebar = () => {
                                     {/*</div>*/}
                                 </Link>
                                 <div className="sidebar__menu__line"></div>
-                            </>
+                            </div>
                         )
                         ) : ('')
                     }

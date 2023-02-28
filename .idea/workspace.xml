@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="136ea68c-132a-4764-986e-3b10da92977c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/addUser/AddUser.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/addUser/AddUser.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tests/Tests.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tests/Tests.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tests/Tests.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tests/Tests.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/revenue-list/RevenueList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/revenue-list/RevenueList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/overall-list/OverallList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/overall-list/OverallList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/summary-box/SummaryBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/summary-box/SummaryBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
