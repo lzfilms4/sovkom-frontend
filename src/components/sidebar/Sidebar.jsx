@@ -41,16 +41,7 @@ const Sidebar = () => {
 
                 <div className="sidebar__menu__block">
                     <div className="sidebar__menu__title"> Сотрудники</div>
-                    {/*<div className="sidebar__menu__line"></div>*/}
 
-                    {/*<Link to={'/search'} className={`sidebar__menu__item`} onClick={closeSidebar}>*/}
-                    {/*        <div className="sidebar__menu__item__icon">*/}
-                    {/*        <i className='bx bx-add-to-queue'></i>*/}
-                    {/*        </div>*/}
-                    {/*        <div className="sidebar__menu__item__txt">*/}
-                    {/*            Поиск*/}
-                    {/*        </div>*/}
-                    {/*</Link>*/}
                     <div className="sidebar__menu__line"></div>
                     <Link to={'PersonsList'} className={`sidebar__menu__item`} onClick={closeSidebar}>
                             <div className="sidebar__menu__item__icon">
@@ -88,20 +79,9 @@ const Sidebar = () => {
                                 Список
                             </div>
                     </Link>
-                    <div className="sidebar__menu__line"></div>
-                    <Link to={'/top-list'} className={`sidebar__menu__item`} onClick={closeSidebar}>
-                            <div className="sidebar__menu__item__icon">
-                            <i className='bx bx-search'></i>
-                            </div>
-                            <div className="sidebar__menu__item__txt">
-                                Топ-лист
-                            </div>
-                    </Link>
-                    <div className="sidebar__menu__line"></div>
-                    <Link to={'/add'} className={`sidebar__menu__item add`} onClick={closeSidebar}>
-                            <div className="sidebar__menu__item__txt add__txt">
-                                Добавить/Удалить
-                            </div>
+                    <Link to ="addUser" className={`sidebar__menu__item add`}>
+                        <div className="sidebar__menu__item__txt add__txt" onClick={closeSidebar}>
+                        </div>
                     </Link>
                 </div>
 

@@ -4,6 +4,7 @@ import {fetchTests} from '../../redux/slices/testsSlice'
 import { useParams, useNavigate } from "react-router-dom";
 import './AddUser.scss';
 import axios from "axios";
+import { Link, useLocation } from 'react-router-dom'
 
 
 const AddUser = () => {
@@ -94,7 +95,28 @@ const AddUser = () => {
         setEducation(event.target.value);
     }
     const CopyEducationField = (event) => {
-        setEducationField(event.target.value);
+        setGender("0");
+        document.getElementById("field").innerHTML="Человеческие ресурсы";
+    }
+    const CopyEducationField1 = (event) => {
+        setGender("1");
+        document.getElementById("field").innerHTML="Наука о жизни";
+    }
+    const CopyEducationField2 = (event) => {
+        setGender("2");
+        document.getElementById("field").innerHTML="Маркетинг";
+    }
+    const CopyEducationField3 = (event) => {
+        setGender("3");
+        document.getElementById("field").innerHTML="Медицина";
+    }
+    const CopyEducationField4 = (event) => {
+        setGender("4");
+        document.getElementById("field").innerHTML="Другое";
+    }
+    const CopyEducationField5 = (event) => {
+        setGender("5");
+        document.getElementById("field").innerHTML="Техническая степень";
     }
     const CopyGender = (event) => {
         setGender("1");
@@ -162,7 +184,9 @@ const AddUser = () => {
 
 
     const dispatch = useDispatch()
-    React.useEffect(() => {dispatch(fetchTests())}, [])
+    React.useEffect(() => {dispatch(fetchTests())
+        document.getElementById("infoUser").innerHTML="Добавление сотрудника";}, [])
+
 
     const tests = useSelector((state) => state.tests)
 
@@ -330,6 +354,25 @@ const AddUser = () => {
                         <input type="text" onChange={CopyTotalWorkingYears}></input>
                     </div>
                     <div className="question">
+                        <div className="questionTxt">Сфера образования</div>
+                    </div>
+                    <div className="answers">
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="#" id="field">Выбрать</a>
+                                    <ul className="second">
+                                        <li><a href="#" onClick={CopyEducationField}>Человеческие ресурсы</a></li>
+                                        <li><a href="#" onClick={CopyEducationField1}>Наука о жизни</a></li>
+                                        <li><a href="#" onClick={CopyEducationField2}>Маркетинг</a></li>
+                                        <li><a href="#" onClick={CopyEducationField3}>Медицина</a></li>
+                                        <li><a href="#" onClick={CopyEducationField4}>Другое</a></li>
+                                        <li><a href="#" onClick={CopyEducationField5}>Техническая степень</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div className="question">
                         <div className="questionTxt">Лет в компании</div>
                     </div>
                     <div className="answers">
@@ -341,12 +384,7 @@ const AddUser = () => {
                     <div className="answers">
                         <input type="text" onChange={CopyYearsInCurrentRole}></input>
                     </div>
-                    <div className="question">
-                        <div className="questionTxt">Сфера образования</div>
-                    </div>
-                    <div className="answers">
-                        <input type="text" onChange={CopyEducationField}></input>
-                    </div>
+
                     <div className="question">
                         <div className="questionTxt"> Годы работы с Нынешним менеджером</div>
                     </div>
@@ -358,7 +396,9 @@ const AddUser = () => {
 
             </div>
             <div className="accept">
-                <button type="submit">Отправить</button>
+                <Link to ="/PersonsList">
+                <button type="submit" onClick={sendTest}>Отправить</button>
+                </Link>
             </div>
         </div>
     );

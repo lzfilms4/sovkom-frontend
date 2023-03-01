@@ -14,7 +14,8 @@ import {fetchPersons} from '../redux/slices/personsSlice'
 
 const Dashboard = () => {
     const dispatch = useDispatch()
-    React.useEffect(() => {dispatch(fetchPersons())}, [])
+    React.useEffect(() => {dispatch(fetchPersons())
+        document.getElementById("infoUser").innerHTML="Информация о сотруднике";}, [])
     const { id } = useParams();
     const navigate = useNavigate();
     const person = useSelector((state) => state.persons.persons).find(person => person._id === id)

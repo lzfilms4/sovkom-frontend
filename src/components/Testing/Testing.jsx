@@ -9,7 +9,8 @@ const Testing =() =>{
 
     const dispatch = useDispatch()
 
-    React.useEffect(() => {dispatch(fetchTests())}, [])
+    React.useEffect(() => {dispatch(fetchTests())
+        document.getElementById("infoUser").innerHTML="Тестирование";}, [])
     const tests = useSelector((state) => state.tests)
     return(
         <div className='personsList'>

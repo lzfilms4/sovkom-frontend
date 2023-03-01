@@ -5,7 +5,7 @@ const UserInfo = () => {
     return (
         <div className='user-info'>
             <div className="user-info__name">
-                <span>Информация о сотруднике</span>
+                <span id="infoUser">Информация о сотруднике</span>
             </div>
         </div>
     )

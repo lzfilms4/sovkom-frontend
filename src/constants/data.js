@@ -1,4 +1,5 @@
 import images from "./images"
+import React from "react";
 
 const data = {
     user: {
@@ -19,15 +20,15 @@ const data = {
             percent: 38
         },
         {
-            title: 'Revenue',
-            subtitle: 'Total revenue today',
-            value: 'Программист',
+            title: 'Ежемесячный доход',
+            subtitle: 'на работе',
+            value: '49596',
             percent: 38
         },
         {
-            title: 'Visits',
-            subtitle: 'Total visits today',
-            value: '2345',
+            title: 'Лет с момента последнего повышения',
+            subtitle: 'на работе',
+            value: '1',
             percent: 55
         }
     ],
