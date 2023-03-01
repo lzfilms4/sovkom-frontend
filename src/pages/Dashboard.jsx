@@ -19,7 +19,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
     const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
     const persons = useSelector((state) => state.persons)
-
+    console.log(person)
     return (
         persons.persons.length?
         (
@@ -77,16 +77,28 @@ const Dashboard = () => {
 export default Dashboard
 
 const RevenueByMonthsChart = () => {
+    const dispatch = useDispatch()
+    React.useEffect(() => {dispatch(fetchPersons())}, [])
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
+    const persons = useSelector((state) => state.persons)
     return (
         <>
             <div className="title mb tests">
                 Результаты тестов
             </div>
             <div className='tests'>
-                <div className="tests__block">
-                    <div className="tests__block_title">Название теста</div>
-                    <div className="tests__block_value">24</div>
-                </div>
+                {
+                    persons.length?
+                    person.tests.map((el,id) => (
+                        <div className="tests__block">
+                            <div className="tests__block_title">{el[0]}</div>
+                            <div className="tests__block_value">{el[1]}</div>
+                        </div>
+                    )) : ('')
+                }
+
                 <div className="tests__block">
                     <div className="tests__block_title">Название теста</div>
                     <div className="tests__block_value">24</div>
