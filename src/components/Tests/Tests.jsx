@@ -33,7 +33,7 @@ const Tests = () =>{
     return (
         <div className="maindiv">
         {
-            tests.tests.length ? (<div className="title">{test.name}</div>):('')
+            tests.tests.length ? (<div className="title-test">{test.name}</div>):('')
         }
             <div className="block">
                 <div className="col-12 col-md-12">
@@ -41,9 +41,7 @@ const Tests = () =>{
                         <div className="questionTxt">Введите ваше фио</div>
                     </div>
                     <div className="answers">
-                        <ul>
                             <input type="text" onChange={changeFio}></input>
-                        </ul>
                     </div>
 
                 </div>
