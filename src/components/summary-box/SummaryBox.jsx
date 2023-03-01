@@ -4,26 +4,7 @@ import Box from '../box/Box'
 import { Progress, Space } from 'antd';
 
 import image from '../../assets/images/Avatar.png'
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-} from 'chart.js'
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-)
 
 
 
@@ -67,6 +48,7 @@ export default SummaryBox
 
 export const SummaryBoxSpecial = ({name, yearsAtCompany, age, mood, item }) => {
     const moodSum = Math.floor((mood.reduce((sum,el) => sum+el,0))/mood.length)
+
     return (
         <Box>
             <div className="summary-box-special">
@@ -86,7 +68,7 @@ export const SummaryBoxSpecial = ({name, yearsAtCompany, age, mood, item }) => {
                         <div className="summary-box-special__value__block__value"> {yearsAtCompany} </div>
                     </div>
                     <div className="summary-box-special__value__block">
-                        <div className="summary-box-special__value__block__title"> Настроение</div>
+                        <div className="summary-box-special__value__block__title"> Настроение<p>1</p></div>
                         <div className="summary-box-special__value__block__value"> {moodSum}/5 </div>
                     </div>
                     <div className="summary-box-special__value__block">
@@ -99,7 +81,8 @@ export const SummaryBoxSpecial = ({name, yearsAtCompany, age, mood, item }) => {
     )
 }
 
-export const SummaryBoxSpecialHappiness = ({ item }) => {
+export const SummaryBoxSpecialHappiness = ({ happiness }) => {
+    console.log(happiness)
     return (
         <Box>
             <div className="summary-box-special">
@@ -111,16 +94,16 @@ export const SummaryBoxSpecialHappiness = ({ item }) => {
                 <div className="summary-box-special__chart">
                     Вероятность увольнения: Низкая
                 </div>
-                <Progress className='summary-box__lineHappiness' percent={90} strokeColor={{ '0%': '#FF0000','50%': '#F2E823', '100%': '#1E9600' }} />
+                <Progress className='summary-box__lineHappiness' percent={happiness} strokeColor={{ '0%': '#FF0000','50%': '#F2E823', '100%': '#1E9600' }} />
 
                 <div className="summary-box-special__value">
 
                     {/* {item.value} */}
                     <div className="summary-box-special__value__block">
-                        <div className="summary-box-special__value__block__title"> Низкий </div>
+                        <div className="summary-box-special__value__block__title">   </div>
                     </div>
                     <div className="summary-box-special__value__block">
-                        <div className="summary-box-special__value__block__title"> Высокий </div>
+                        <div className="summary-box-special__value__block__title">   </div>
                     </div>
 
 

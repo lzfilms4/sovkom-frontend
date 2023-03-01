@@ -8,6 +8,7 @@ import PersonsList from "./components/personsList/PersonsList";
 import React from "react";
 import Testing from "./components/Testing/Testing";
 import Tests from "./components/Tests/Tests";
+import AddUser from "./components/addUser/AddUser";
 
 function App() {
     return (
@@ -18,6 +19,8 @@ function App() {
                     <Route index element={<PersonsList />} />
                     <Route path="personsList" element={<PersonsList />} />
                     <Route path="/personsList/:id" element={<Dashboard />} />
+                    <Route path="addUser" element={<AddUser />} />
+
                     <Route path="Testing" element={<Testing />} />
                     <Route path="Tests/:id" element={<Tests />} />
                     <Route path="settings" element={<Blank />} />

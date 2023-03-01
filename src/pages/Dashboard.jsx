@@ -9,23 +9,28 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import OverallList from '../components/overall-list/OverallList'
 import RevenueList from '../components/revenue-list/RevenueList'
-import {useSelector} from "react-redux";
+import { useSelector, useDispatch } from 'react-redux'
+import {fetchPersons} from '../redux/slices/personsSlice'
 
 const Dashboard = () => {
-
+    const dispatch = useDispatch()
+    React.useEffect(() => {dispatch(fetchPersons())}, [])
     const { id } = useParams();
     const navigate = useNavigate();
     const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
-    console.log(person)
+    const persons = useSelector((state) => state.persons)
+
     return (
-        <DashboardWrapper>
+        persons.persons.length?
+        (
+            <DashboardWrapper>
             <DashboardWrapperMain>
                 <div className="row">
-                    <div className="col-4 col-md-12">
+                    <div className="col-5 col-md-12">
                         <SummaryBoxSpecial name={person.fullName} yearsAtCompany={person.YearsAtCompany} age={person.age} mood={person.mood} item={data.revenueSummary} />
                     </div>
-                    <div className="col-8 hide-md">
-                        <SummaryBoxSpecialHappiness item={data.revenueSummary} />
+                    <div className="col-7 hide-md">
+                        <SummaryBoxSpecialHappiness happiness={person.happiness*10} />
                     </div>
                     <div className="col-12 col-md-12">
                         <div className="row">
@@ -53,7 +58,9 @@ const Dashboard = () => {
                     <div className="mb">
                         <OverallList />
                     </div> 
-                    <div className="title mb small">В основном положительное</div>
+                    <div className="title mb small">
+                        В основном положительное
+                    </div>
 
                 </div>
                 
@@ -63,6 +70,7 @@ const Dashboard = () => {
                 </div>
             </DashboardWrapperRight>
         </DashboardWrapper>
+        ) : ('')
     )
 }
 

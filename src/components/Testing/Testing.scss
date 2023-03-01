@@ -10,3 +10,45 @@
     width: 60%;
   }
 }
+.test{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px 10px 0;
+}
+.maindiv{
+  .block {
+    background: white;
+    border-radius: 35px;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1B2559FF;
+    margin-bottom: 10px;
+
+    .question{
+      width: 100%;
+      text-align: center;
+
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    .answers {
+
+      padding-bottom: 15px;
+
+      .answers {
+
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding-left: 10px;
+
+        background: #b4b9c7;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+}

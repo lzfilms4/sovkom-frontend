@@ -11,21 +11,13 @@
         justify-content: space-around;
         text-align: center;
     }
-    &__chart {
-        width: 40%;
 
-        &__value {
-            margin-top: -30%;
-            font-weight: 700;
-        }
-    }
     &__line{
         height: 2px;
         background: #E9EDF7;
         border-radius: 8px;
         width: 100%;
-        margin-bottom:13px;
-        margin-top:12px;
+        vertical-align: center;
         @include tablet {
             width: 25vw;
         }
@@ -43,7 +35,7 @@
         }
     }
     &__info {
-        width: 60%;
+        width: 100%;
         @include flex(flex-start, space-between);
         flex-direction: column;
 
@@ -71,9 +63,11 @@
             font-weight: 700;
             // font-size: $fontSizeLarge;
             color: $black;
+            width: 100%;
+            text-align: center;
             &.center{
-                margin-left: auto;
-                margin-right: auto;
+
+                width: 100%;
             }
         }
     }
@@ -85,7 +79,8 @@
     @include flex(center, space-between);
     flex-direction: column;
     height: 100%;
-    
+    width: 100%;
+
     &__title {
         // font-family: 'DM Sans';
         font-style: normal;
@@ -105,6 +100,7 @@
         justify-content: space-between;
         width: 80%;
         &__block{
+            height: 100%;
             width: 100%;
             text-align: center;
             &__title{
@@ -117,8 +113,13 @@
                 text-align: center;
                 letter-spacing: -0.02em;
                 color: #A3AED0;
+                p{
+                    color: white;
+                }
             }
             &__value{
+                height: 100%;
+
                 width: 100%;
                 font-style: normal;
                 font-weight: 600;
