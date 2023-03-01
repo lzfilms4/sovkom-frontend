@@ -19,14 +19,14 @@ const data = {
             percent: 38
         },
         {
-            title: 'Revenue',
-            subtitle: 'Total revenue today',
+            title: 'Лет',
+            subtitle: 'с менеджером',
             value: 'Программист',
             percent: 38
         },
         {
-            title: 'Visits',
-            subtitle: 'Total visits today',
+            title: 'Лет',
+            subtitle: 'с повышения',
             value: '2345',
             percent: 55
         }
