@@ -39,9 +39,7 @@ const Tests = () =>{
                         <div className="questionTxt">Введите ваше фио</div>
                     </div>
                     <div className="answers">
-                        <ul>
                             <input type="text" onChange={changeFio}></input>
-                        </ul>
                     </div>
 
                 </div>

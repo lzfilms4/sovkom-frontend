@@ -47,7 +47,7 @@ const Dashboard = () => {
                 <div className="row">
                     <div className="col-12">
                         <Box>
-                            <RevenueByMonthsChart />
+                            <RevenueByMonthsChart tests={person.tests} />
                         </Box>
                     </div>
                 </div>
@@ -76,13 +76,7 @@ const Dashboard = () => {
 
 export default Dashboard
 
-const RevenueByMonthsChart = () => {
-    const dispatch = useDispatch()
-    React.useEffect(() => {dispatch(fetchPersons())}, [])
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const person = useSelector((state) => state.persons.persons).find(person => person._id === id)
-    const persons = useSelector((state) => state.persons)
+const RevenueByMonthsChart = ({tests}) => {
     return (
         <>
             <div className="title mb tests">
@@ -90,23 +84,17 @@ const RevenueByMonthsChart = () => {
             </div>
             <div className='tests'>
                 {
-                    persons.length?
-                    person.tests.map((el,id) => (
-                        <div className="tests__block">
-                            <div className="tests__block_title">{el[0]}</div>
-                            <div className="tests__block_value">{el[1]}</div>
-                        </div>
-                    )) : ('')
-                }
+                    tests.map((el,id) =>{
+                        console.log(el[0], 'asdasdasd')
+                        return (
+                            <div className="tests__block">
+                                <div className="tests__block_title">{el[0]}</div>
+                                <div className="tests__block_value">{el[1]}</div>
+                            </div>
+                        )
+                    } )
 
-                <div className="tests__block">
-                    <div className="tests__block_title">Название теста</div>
-                    <div className="tests__block_value">24</div>
-                </div>
-                <div className="tests__block">
-                    <div className="tests__block_title">Название теста</div>
-                    <div className="tests__block_value">24</div>
-                </div>
+                }
             </div>
         </>
     )

@@ -2,7 +2,12 @@
 @use 'sass:math';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 .title {
-  color: #000;
+  color: #000 !important;
+  text-align: center;
+  padding: 15px 0;
+}
+input{
+  width: 30% !important;
 }
 .maindiv{
   .block {
