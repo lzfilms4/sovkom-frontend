@@ -30,6 +30,7 @@ const AddUser = () => {
     const [YearsWithCurrManager, setYearsWithCurrManager] = React.useState('')
 
     const sendTest = () => {
+        //axios.post('https://bright-wasp-long-johns.cyclic.app/person/create',
         axios.post('https://bright-wasp-long-johns.cyclic.app/person/create',
             {
                 fullName: fullName,
@@ -41,7 +42,7 @@ const AddUser = () => {
                 EducationField: EducationField,
                 Gender: Gender,
                 HourlyRate: HourlyRate,
-                JobInvolement: JobInvolement,
+                JobInvolvement: JobInvolement,
                 JobLevel: JobLevel,
                 MaritalStatus: MaritalStatus,
                 MonthlyIncome: MonthlyIncome,
@@ -53,8 +54,7 @@ const AddUser = () => {
                 YearsInCurrentRole: YearsInCurrentRole,
                 YearsSinceLastPromotion: YearsSinceLastPromotion,
                 YearsWithCurrManager: YearsWithCurrManager
-            }).then(res => console.log(res))
-
+            }).then(res => console.log(res)).catch(err => console.log(err));
     }
     const CopyName = (event) => {
         setfullName(event.target.value);
