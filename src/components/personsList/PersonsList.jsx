@@ -1,9 +1,7 @@
 import React from "react";
 import './personsList.scss';
-import axios from "axios";
 import { useSelector, useDispatch } from 'react-redux'
 import {fetchPersons} from '../../redux/slices/personsSlice'
-import {fetchTests} from '../../redux/slices/testsSlice'
 import {Link} from "react-router-dom";
 
 const PersonsList =() =>{

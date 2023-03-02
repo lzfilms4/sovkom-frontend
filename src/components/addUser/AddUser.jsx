@@ -1,15 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import {fetchTests} from '../../redux/slices/testsSlice'
-import { useParams, useNavigate } from "react-router-dom";
 import './AddUser.scss';
 import axios from "axios";
-import { Link, useLocation } from 'react-router-dom'
+
 
 
 const AddUser = () => {
-    const [answers, setAnswers] = React.useState([])
-    const [step, setStep] = React.useState(0)
     const [fullName, setfullName] = React.useState('')
     const [age, setage] = React.useState('')
     const [BusinessTravel, setBusinessTravel] = React.useState('')
@@ -32,15 +29,12 @@ const AddUser = () => {
     const [YearsSinceLastPromotion, setYearsSinceLastPromotion] = React.useState('')
     const [YearsWithCurrManager, setYearsWithCurrManager] = React.useState('')
 
-    const setAnswersValue = (value) => {
-        setAnswers(prev => [...prev, value])
-        setStep(step + 1)
-    }
     const sendTest = () => {
         axios.post('https://bright-wasp-long-johns.cyclic.app/person/create',
-            {fullName: fullName,
-        age : age,
-        BusinessTravel: BusinessTravel,
+            {
+                fullName: fullName,
+                age: age,
+                BusinessTravel: BusinessTravel,
                 DailyRate: DailyRate,
                 Department: Department,
                 Education: Education,
@@ -59,7 +53,8 @@ const AddUser = () => {
                 YearsInCurrentRole: YearsInCurrentRole,
                 YearsSinceLastPromotion: YearsSinceLastPromotion,
                 YearsWithCurrManager: YearsWithCurrManager
-        })
+            }).then(res => console.log(res))
+
     }
     const CopyName = (event) => {
         setfullName(event.target.value);
@@ -67,63 +62,67 @@ const AddUser = () => {
     const CopyAge = (event) => {
         setage(event.target.value);
     }
-    const CopyBusinessTravel = (event) => {
-        setBusinessTravel("1");
+    const CopyBusinessTravel = () => {
+        setBusinessTravel('1');
         document.getElementById("Travel").innerHTML="Часто";
     }
-    const CopyBusinessTravel2 = (event) => {
-        setBusinessTravel("2");
+    const CopyBusinessTravel2 = () => {
+        setBusinessTravel('2');
         document.getElementById("Travel").innerHTML="Редко";    }
-    const CopyBusinessTravel0 = (event) => {
-        setBusinessTravel("0");
+    const CopyBusinessTravel0 = () => {
+        setBusinessTravel('0');
         document.getElementById("Travel").innerHTML="Нет";    }
     const CopyDailyRate = (event) => {
     setDailyRate(event.target.value);
     }
-    const CopyDepartment = (event) => {
-        setDepartment("1");
+    const CopyDepartment = () => {
+        setDepartment('1');
         document.getElementById("Department").innerHTML="Исследовательская разработка";
     }
-    const CopyDepartment0 = (event) => {
-        setDepartment("0");
+    const CopyDepartment0 = () => {
+        setDepartment('0');
         document.getElementById("Department").innerHTML="Человеческие ресурсы";
     }
-    const CopyDepartment2 = (event) => {
-        setDepartment("2");
+    const CopyDepartment2 = () => {
+        setDepartment('2');
         document.getElementById("Department").innerHTML="Продажи";    }
     const CopyEducation = (event) => {
         setEducation(event.target.value);
     }
-    const CopyEducationField = (event) => {
-        setGender("0");
+    const CopyEducationField = () => {
+        setEducationField('0');
+
         document.getElementById("field").innerHTML="Человеческие ресурсы";
     }
-    const CopyEducationField1 = (event) => {
-        setGender("1");
+    const CopyEducationField1 = () => {
+        setEducationField('1');
         document.getElementById("field").innerHTML="Наука о жизни";
     }
-    const CopyEducationField2 = (event) => {
-        setGender("2");
+    const CopyEducationField2 = () => {
+        setEducationField('2');
+
         document.getElementById("field").innerHTML="Маркетинг";
     }
-    const CopyEducationField3 = (event) => {
-        setGender("3");
+    const CopyEducationField3 = () => {
+        setEducationField('3');
         document.getElementById("field").innerHTML="Медицина";
     }
-    const CopyEducationField4 = (event) => {
-        setGender("4");
+    const CopyEducationField4 = () => {
+        setEducationField('4');
+
         document.getElementById("field").innerHTML="Другое";
     }
-    const CopyEducationField5 = (event) => {
-        setGender("5");
+    const CopyEducationField5 = () => {
+        setEducationField('5');
+
         document.getElementById("field").innerHTML="Техническая степень";
     }
-    const CopyGender = (event) => {
-        setGender("1");
+    const CopyGender = () => {
+        setGender('1');
         document.getElementById("gender").innerHTML="Мужской";
     }
-    const CopyGender0 = (event) => {
-        setGender("0");
+    const CopyGender0 = () => {
+        setGender('0');
         document.getElementById("gender").innerHTML="Женский";
     }
     const CopyHourlyRate = (event) => {
@@ -135,14 +134,14 @@ const AddUser = () => {
     const CopyJobLevel = (event) => {
         setJobLevel(event.target.value);
     }
-    const CopyMaritalStatus = (event) => {
-        setOverTime("1");
+    const CopyMaritalStatus = () => {
+        setMaritalStatus('1');
         document.getElementById("FamilyPos").innerHTML="Женат (замужем)";    }
-    const CopyMaritalStatus2 = (event) => {
-        setOverTime("2");
+    const CopyMaritalStatus2 = () => {
+        setMaritalStatus('2');
         document.getElementById("FamilyPos").innerHTML="Не женат (не замужем)";    }
-    const CopyMaritalStatus0 = (event) => {
-        setOverTime("0");
+    const CopyMaritalStatus0 = () => {
+        setMaritalStatus('0');
         document.getElementById("FamilyPos").innerHTML="Разведён (разведена)";    }
     const CopyMonthlyIncome = (event) => {
         setMonthlyIncome(event.target.value);
@@ -150,12 +149,12 @@ const AddUser = () => {
     const CopyNumCompaniesWorked = (event) => {
         setNumCompaniesWorked(event.target.value);
     }
-    const CopyOverTime = (event) => {
-        setOverTime("1");
+    const CopyOverTime = () => {
+        setOverTime('1');
         document.getElementById("Over").innerHTML="Да";
     }
-    const CopyOverTime0 = (event) => {
-        setOverTime("0");
+    const CopyOverTime0 = () => {
+        setOverTime('0');
         document.getElementById("Over").innerHTML="Нет";
     }
     const CopyStandardHours = (event) => {
@@ -188,9 +187,6 @@ const AddUser = () => {
         document.getElementById("infoUser").innerHTML="Добавление сотрудника";}, [])
 
 
-    const tests = useSelector((state) => state.tests)
-
-
     return (
         <div className="maindiv">
             <div className="bl">
@@ -217,7 +213,7 @@ const AddUser = () => {
                                 <ul>
                                     <li><a href="#" id="Travel">Выбрать</a>
                                         <ul className="second">
-                                            <li><a href="#" onClick={CopyBusinessTravel}>Часто</a></li>
+                                            <li><a href="#" type='button' onClick={CopyBusinessTravel}>Часто</a></li>
                                             <li><a href="#" onClick={CopyBusinessTravel2}>Редко</a></li>
                                             <li><a href="#" onClick={CopyBusinessTravel0}>Нет</a></li>
                                         </ul>
@@ -396,9 +392,7 @@ const AddUser = () => {
 
             </div>
             <div className="accept">
-                <Link to ="/PersonsList">
                 <button type="submit" onClick={sendTest}>Отправить</button>
-                </Link>
             </div>
         </div>
     );
